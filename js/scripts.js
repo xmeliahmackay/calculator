@@ -34,11 +34,19 @@ $(document).ready(function() {
     $("#output2").text(result);
     event.preventDefault();
   });
-  $("form#multiply").submit(function() {
+  $("form#multiply").submit(function(event) {
     var number1 = parseInt($("#mult1").val());
     var number2 = parseInt($("#mult2").val());
     var result = multiply(number2, number1);
     $("#output3").text(result);
+    event.preventDefault();
+
+  });
+  $("form#divide").submit(function(event) {
+    var number1 = parseInt($("#div1").val());
+    var number2 = parseInt($("#div2").val());
+    var result = divide(number1, number2);
+    $("#output4").text(result);
     event.preventDefault();
 
   });
